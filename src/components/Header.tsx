@@ -1,50 +1,33 @@
 import React from 'react';
-import { AppBar, Toolbar } from '@mui/material';
+import { AppBar, Toolbar, Box } from '@mui/material';
 import { styled } from '@mui/system';
-import logo from '../image/logo.png';
+import logo from '../image/logo.png'; // ロゴ画像への正しいパスを指定してください
 
-const StyledAppBar = styled(AppBar)({
-  backgroundColor: 'white',
-  color: 'black',
-  borderRadius: '25px',
-  boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.5)',
-  padding: '0 1rem',
-  position: 'fixed',
-  top: '1rem',
-  left: '1rem',
-  width: 'calc(100% - 2rem)',
-  height: '3.125rem',
-  zIndex: 1100,
+const CustomAppBar = styled(AppBar)(({ theme }) => ({
+  borderRadius: '1rem',
+  margin: '1rem auto 0 auto', // 上部にマージンを追加
+  padding: '0 1rem', // 左右にパディングを設定
+  backgroundColor: '#ffffff',
+  width: '95%',
+  left: 0,
+  right: 0,
+  height: '3rem', // AppBarの高さを設定
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  minWidth: '20rem', // 最小幅を設定
-  minHeight: '3.125rem', // 最小高さを設定
-});
-
-const StyledToolbar = styled(Toolbar)({
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  width: '100%',
-  minHeight: 'auto',
-  padding: '0',
-});
+}));
 
 const Logo = styled('img')({
-  height: '100%',
-  maxHeight: '4rem', // ロゴの最大高さを設定（40px = 2.5rem）
-  padding: '0.9375rem 0',
-  boxSizing: 'border-box',
+  height: '2rem', // ロゴの高さを調整
 });
 
 const Header: React.FC = () => {
   return (
-    <StyledAppBar position="fixed">
-      <StyledToolbar>
-        <Logo src={logo} alt="ロゴ" />
-      </StyledToolbar>
-    </StyledAppBar>
+    <CustomAppBar position="fixed" elevation={6}>
+      <Toolbar sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: 0, minHeight: '3rem' }}> {/* Toolbarの高さをAppBarに合わせて調整 */}
+        <Logo src={logo} alt="Logo" />
+      </Toolbar>
+    </CustomAppBar>
   );
 };
 

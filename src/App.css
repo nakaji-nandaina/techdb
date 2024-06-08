@@ -1,38 +1,45 @@
+/* App.css */
+
+/* グローバルリセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ベースラインのスタイル */
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f0f0; /* 背景色 */
+  color: #333; /* テキストの色 */
+  height: 100%;
+  width: 100%;
+}
+
+/* アプリ全体のコンテナ */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; /* 中央揃え */
+  justify-content: flex-start; /* 上揃え */
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+/* ヘッダーを配置するためのトップマージン */
+body {
+  padding-top: 4rem; /* Header の高さ + 余裕 */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* メインコンテンツのスタイル */
+main {
+  padding: 1rem;
+  width: 100%;
+  max-width: 1200px; /* レスポンシブ最大幅 */
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 600px) {
+  main {
+    padding: 0.5rem;
   }
 }
