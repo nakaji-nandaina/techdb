@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, Toolbar } from '@mui/material';
 import { styled } from '@mui/system';
-import logo from '../image/TechDB.png';
+import logo from '../image/logo.png';
 
 const StyledAppBar = styled(AppBar)({
   backgroundColor: 'white',
