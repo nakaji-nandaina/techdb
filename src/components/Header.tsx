@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Box } from '@mui/material';
+import { AppBar, Toolbar } from '@mui/material';
 import { styled } from '@mui/system';
 import logo from '../image/logo.png'; // ロゴ画像への正しいパスを指定してください
 
