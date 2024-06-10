@@ -50,8 +50,14 @@ const CatchphraseContainer = styled(Box)(({ theme }) => ({
 const CatchphraseText = styled(Typography)(({ theme }) => ({
     fontFamily: 'Montserrat',
     fontSize: '8rem',
+    [theme.breakpoints.down('xs')]: {
+        fontSize: '3rem', // 600px未満の画面サイズ
+      },
     [theme.breakpoints.down('sm')]: {
       fontSize: '4rem',
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+        fontSize: '6rem', // 900pxから1200pxの画面サイズ
     },
     [theme.breakpoints.up('lg')]: {
       fontSize: '11rem',
