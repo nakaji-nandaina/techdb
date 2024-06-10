@@ -51,9 +51,9 @@ const CatchphraseText = styled(Typography)(({ theme }) => ({
     fontFamily: 'Montserrat',
     fontSize: '8rem',
     [theme.breakpoints.down('xs')]: {
-        fontSize: '3rem', // 600px未満の画面サイズ
+        fontSize: '2rem', // 600px未満の画面サイズ
       },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.between('xs','sm')]: {
       fontSize: '4rem',
     },
     [theme.breakpoints.between('sm', 'md')]: {
