@@ -50,7 +50,6 @@ const techCardsData = [
 
 const TechCardArea: React.FC = () => {
   const theme = useTheme();
-  const isXs = useMediaQuery(theme.breakpoints.only('xs'));
   const isSm = useMediaQuery(theme.breakpoints.only('sm'));
   const isMd = useMediaQuery(theme.breakpoints.only('md'));
   const isLg = useMediaQuery(theme.breakpoints.only('lg'));
