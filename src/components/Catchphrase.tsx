@@ -44,7 +44,18 @@ const CatchphraseContainer = styled(Box)(({ theme }) => ({
     height: '100vh',
     position: 'relative',
     textAlign: 'center',
-    //backgroundColor: 'white',
+    //backgroundColor: 'white',][
+}));
+
+const CatchphraseText = styled(Typography)(({ theme }) => ({
+    fontFamily: 'Montserrat',
+    fontSize: '6rem',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '4rem',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '8rem',
+    },
 }));
 
 const Catchphrase: React.FC = () => {
@@ -53,10 +64,10 @@ const Catchphrase: React.FC = () => {
             <OuterCircle />
             <MiddleCircle />
             <InnerCircle />
-            <Typography variant="h1" component="h1" color="textPrimary" fontWeight="bold" fontFamily="Montserrat" fontSize="8rem">
-                技術は繋がる<br/>
-                技術は広がる
-            </Typography>
+            <CatchphraseText variant="h1" color="textPrimary" fontWeight="bold">
+                新しい技術で<br/>
+                広がる世界
+            </CatchphraseText>
         </CatchphraseContainer>
     );
 };
