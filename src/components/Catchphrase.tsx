@@ -54,7 +54,7 @@ const CatchphraseText = styled(Typography)(({ theme }) => ({
       fontSize: '4rem',
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '12rem',
+      fontSize: '11rem',
     },
 }));
 
