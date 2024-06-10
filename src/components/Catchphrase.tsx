@@ -49,12 +49,12 @@ const CatchphraseContainer = styled(Box)(({ theme }) => ({
 
 const CatchphraseText = styled(Typography)(({ theme }) => ({
     fontFamily: 'Montserrat',
-    fontSize: '6rem',
+    fontSize: '8rem',
     [theme.breakpoints.down('sm')]: {
       fontSize: '4rem',
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: '8rem',
+      fontSize: '12rem',
     },
 }));
 
