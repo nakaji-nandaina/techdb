@@ -10,7 +10,6 @@
 /* ベースラインのスタイル */
 html, body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f0f0f0; /* 背景色 */
   color: #333; /* テキストの色 */
   height: 100%;
   width: 100%;
