@@ -44,6 +44,33 @@ const CatchphraseContainer = styled(Box)(({ theme }) => ({
     height: '100vh',
     position: 'relative',
     textAlign: 'center',
+    marginTop: 'auto',
+    marginBottom: 'auto',
+    [theme.breakpoints.down( 'md')]: {
+        paddingTop: '-20vh', 
+        paddingBottom: '-20vh', 
+        marginTop: '-20vh', // 900pxから1200pxの画面サイズ
+        marginBottom:'-20vh'
+    },
+    [theme.breakpoints.between('sm', 'md')]: {
+        paddingTop: '-15vh', 
+        paddingBottom: '-15vh', 
+        marginTop: '-15vh', // 900pxから1200pxの画面サイズ
+        marginBottom:'-15vh'
+    },
+    [theme.breakpoints.between('md', 'lg')]: {
+        paddingTop: '-10vh', 
+        paddingBottom: '-10vh', 
+        marginTop: '-10vh', // 900pxから1200pxの画面サイズ
+        marginBottom: '-10vh',
+    },
+    [theme.breakpoints.up('lg')]: {
+        paddingTop: '5vh', 
+        paddingBottom: '-5vh', 
+        marginTop: '5vh', // 900pxから1200pxの画面サイズ
+        marginBottom: '-5vh',
+    },
+    //paddingTop: '5vh',
     //backgroundColor: 'white',][
 }));
 
@@ -57,7 +84,7 @@ const CatchphraseText = styled(Typography)(({ theme }) => ({
       fontSize: '3rem',
     },
     [theme.breakpoints.between('sm', 'md')]: {
-        fontSize: '6rem', // 900pxから1200pxの画面サイズ
+        fontSize: '5rem', // 900pxから1200pxの画面サイズ
     },
     [theme.breakpoints.up('lg')]: {
       fontSize: '11rem',
